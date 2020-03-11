@@ -92,10 +92,10 @@
                 child.parentNode.removeChild(child);
                 //alert(u + '---------' + ua)
             } else {
-                let child = document.getElementsByClassName("masklayer")[0];
-                child.parentNode.removeChild(child);
                 let icon = document.getElementsByClassName("icon-ios")[0];
                 icon.className = "icon-android"
+                let child = document.getElementsByClassName("masklayer")[0];
+                child.parentNode.removeChild(child);
             }
         }
 
@@ -123,6 +123,10 @@
                 }, 6000);
                 window.location.href = "itms-services://?action=download-manifest&url=https://zhan168.oss-cn-shenzhen.aliyuncs.com/manifest.plist";
             } else {
+                let btn1 = document.getElementById("btn1");
+                btn1.style = 'display:none;';
+                let btn2 = document.getElementById("btn2");
+                btn2.style.display = '';
                 window.location.href = "https://zhan168.oss-cn-shenzhen.aliyuncs.com/zhan168.apk";
             }
         }
